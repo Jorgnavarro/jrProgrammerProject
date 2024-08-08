@@ -26,7 +26,12 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        //En caso de que se inicie la escena main, saltando la escena menú, se hace para que no arroje ningún error
+        if (MainManager.Instance != null)
+        {
+            //Seteamos el color que elegimos en el menú principal
+            SetColor(MainManager.Instance.TeamColor);
+        }
     }
 
     void SetColor(Color c)
