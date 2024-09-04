@@ -5,7 +5,7 @@ using System.IO;
 
 public class MainManager : MonoBehaviour
 {
-  public static MainManager Instance;
+  public static MainManager Instance { get; private set; }
   //Almacenamos la variable que contendrá el color que elija el usuario en el menu principal
   public Color TeamColor;
   
